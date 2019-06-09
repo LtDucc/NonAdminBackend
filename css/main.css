@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fffcfc;
+}
+
+.container {
+    margin: auto;
+    width: 90%;
+    overflow: auto;
+}
+
+.header {
+    height: 50px;
+    background-color: #51c7ff;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.left-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-header>h4 {
+    color: #024463;
+}
+
+.avatar {
+    height: 50px;
+    margin-right: 30px;
+}
+
+.right-header {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding-top: 13px;
+}
+
+.right-header>li {
+    padding-left: 30px;  
+    vertical-align: middle;
+}
+
+.search {
+    width: 300px;
+    border: none;
+    height: 25px;
+}
+
+.main {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+.table1 {
+    grid-column: 1/2;
+    overflow: scroll;
+    height: 700px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+.details {
+    grid-column: 2/4;
+}
+
+ /* Style the tab */
+ .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+.tabcontent-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    background-color: #ffffff;
+}
+
+.content {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+}
+
+.post-content{
+    grid-column: 1;
+    overflow: scroll;
+    height: 700px;
+    padding-left: 6px;
+}
+
+.post-right {
+    grid-column: 2;
+}
+
+.abc {
+    height: 46px;
+
+}
+
+.aaa {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nameid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+}
+
+h5 {
+    margin: 0;
+}
+
+.btn {
+    height: 40px;
+    border: none;
+    background-color: #41bc14;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #82fc55;
+}
+
+.category {
+    border: 1px solid #ccc;
+    margin: 5px;
+    height: 100px;
+    padding: 5px;
+}
+
+.publication {
+    border: 1px solid #ccc;
+    margin: 5px;
+    height: 100px;
+    padding: 5px;
+}
+
+.image {
+    border: 1px solid #ccc;
+    margin: 5px;
+    height: 400px;
+    padding: 5px;
+}
+
+.f-image {
+    max-width: 600px;
+    max-height: 370px;
+}
+
+.tags {
+    background-color: #ccc;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.tags:hover {
+    background-color: #f4f4f4;
+}
+
+.fileName {
+    grid-column: 1;
+    border: 1px solid gray;
+}
+
+.fileName > h4 {
+    text-align: center;
+}
+
+.revisionDetail {
+    grid-column: 2;
+    border: 1px solid gray;
+}
+
+.revisionDetail > h4 {
+    text-align: center;
+}
+

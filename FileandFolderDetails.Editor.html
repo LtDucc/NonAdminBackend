@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--maincss-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./css/main.css">
+<style>
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="left-header">
+                <img class="avatar" src="./assets/sample-avatar.jpg" alt="">
+                <h4>Editor</h4>
+            </div>
+            <div>
+                <ul class="right-header">
+                    <li><input class="search" type="text" placeholder="Search"></li>
+                    <li><i class="fas fa-bell"></i></li>
+                    <li><i class="fas fa-envelope"></i></li>
+                    <li><i class="fas fa-user"></i></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+        <div class="main">
+            <div class="navigation">
+                <a style="text-decoration:none; color: #51c7ff" href="#">Dashboard</a>
+                <i style="margin-left: 10px ; margin-right: 10px" class="fas fa-chevron-right"></i>
+                <a style="text-decoration:none; color: #51c7ff" href="#">File and Folder</a>
+                <i style="margin-left: 10px ; margin-right: 10px" class="fas fa-chevron-right"></i>
+                <p style="margin:0">test@test.com</p>
+            </div>
+        </div>
+        <div>
+          <div class="row">
+            <div class="col-md-3">
+                <h5>Folder</h5>
+                <button class="btn" data-toggle="modal" data-target="#addFolder">Add Folder</button>
+                <ul id="myUL">
+                  <li><span class="caret">Folder1</span>
+                    <ul class="nested">
+                      <li>Water</li>
+                      <li>Coffee</li>
+                      <li><span class="caret">Folder2</span>
+                        <ul class="nested">
+                          <li>Black Tea</li>
+                          <li>White Tea</li>
+                          <li><span class="caret">Folder3</span>
+                            <ul class="nested">
+                              <li>Sencha</li>
+                              <li>Gyokuro</li>
+                              <li>Matcha</li>
+                              <li>Pi Lo Chun</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>  
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div class="table-responsive" style="margin-top:10px;">
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Date Modified</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Size</th>
+                                <th scope="col">Manage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Folder1</td>
+                                <td>12/2/2019</td>
+                                <td>File Folder</td>
+                                <td>59 KB</td>
+                                <td>
+                                  <button
+                                  style="	background: none;
+                                   color: inherit;
+                                   border: none;
+                                   padding: 0;
+                                   font: inherit;
+                                   cursor: pointer;
+                                   outline: inherit;"
+                                  data-toggle="modal" data-target="#editFolder">
+                                  <i class="fas fa-edit"></i>
+                                  </button>
+                                   <button style="	background: none;
+                                   color: inherit;
+                                   border: none;
+                                   padding: 0;
+                                   font: inherit;
+                                   cursor: pointer;
+                                   outline: inherit;" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-trash-alt" style="margin-left: 10px; margin-right: 10px;"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="addFolder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Add Folder</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Create</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="editFolder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Folder</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                          </div>
+                          <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      You cannot recover after deleting this user. Proceed
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                      <button type="button" class="btn btn-primary">Yes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
+
+</body>
+</html>
